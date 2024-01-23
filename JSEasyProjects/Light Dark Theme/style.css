@@ -1,0 +1,115 @@
+
+body{
+    --accent-color: orangered;
+    --background-color:white;
+    --text-color:black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+    overflow: hidden;
+
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+
+    background-color:var(--background-color);
+    color: var(--text-color);
+    transition: var(--transition-delay);
+
+
+}
+body.dark{
+
+    --accent-color:#d0d066;
+    --background-color: #333;
+    --text-color:white;
+    transition: var(--transition-delay);
+
+}
+
+.btn{
+        background-color: var(--accent-color);
+        margin-bottom: 2rem;
+        border:none; 
+        display: flex;
+        align-items: center;
+        padding: .5rem 1rem;
+        font-weight: bold;
+        border-radius: .4em;
+        cursor: pointer;
+        color: var(--text-color);
+        outline: none;
+        transition: var(--transition-delay);
+        transform: scale(1);
+}
+
+
+.btn:hover,
+.btn:focus{
+
+    transform: scale(1.1);
+
+
+
+
+}
+
+
+.time{
+    --rotation: 0;
+    position: absolute;
+    height: 200vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transform: rotate(calc(var(--rotation) * 1deg));
+    transition: transform var(--transition-delay);
+    
+
+
+}
+
+
+.sun,
+.moon{
+    position: absolute;
+    transition: opacity, fill,  var(--transition-delay);
+width: 30px;
+height: 30px;
+fill: var(--accent-color);
+
+}
+
+
+
+
+
+.sun{
+    fill: var(--accent-color);
+
+top: 5%;
+opacity: 1;
+}
+
+.dark .sun{
+    opacity: 0;
+}
+
+.moon{
+
+    
+bottom: 5%;
+opacity: 0;
+transform: rotate(180deg);
+
+}
+
+.dark .moon{
+    opacity: 1;
+}
