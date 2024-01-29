@@ -1,0 +1,43 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+
+
+.color{
+
+
+background-color: #2156 ;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+
+
+
+}
+
+button{
+
+    
+padding: 1rem 2.2rem;
+background-color: #33333300;
+color: white;
+border: 1px white solid  ;
+transition: transform 1s ease-in;
+cursor: pointer;
+
+
+}
+
+button:hover{
+
+    transform: scale(1.1)
+
+
+}
